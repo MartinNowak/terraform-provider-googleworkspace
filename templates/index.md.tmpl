@@ -35,9 +35,9 @@ the `googleworkspace` provider.
 ### Impersonating a Google Workspace User
 
 Only users with access to the Admin APIs can access the Admin SDK Directory API, therefore your service account needs
-to impersonate one of those users to access the Admin SDK Directory API. You can do this by granting the GCP IAM role
-`roles/iam.serviceAccountUser` to your service account, with member `user:<impersonated_user_email>`. This user's email
-must be set in the environment variable `GOOGLEWORKSPACE_IMPERSONATED_USER_EMAIL` or in the `impersonated_user_email`
+to impersonate one of those users to access the Admin SDK Directory API. Access to impersonate a super administrator of
+the domain is granted during the [authorization steps above](#configuring-the-service-account).
+This user's email must be set in the environment variable `GOOGLEWORKSPACE_IMPERSONATED_USER_EMAIL` or in the `impersonated_user_email`
 attribute in the provider. Additionally, the user must have logged in at least once and accepted the Google Workspace
 Terms of Service.
 
